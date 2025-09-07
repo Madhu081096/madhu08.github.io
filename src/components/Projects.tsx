@@ -2,6 +2,34 @@ import React from 'react';
 import { ExternalLink, Github, FileText } from 'lucide-react';
 
 const Projects = () => {
+  const professionalProjects = [
+    {
+      title: "Label Information Detection using PolygonYOLO",
+      description: "Developed a robust label detection system leveraging PolygonYOLO to accurately identify and extract label information from warehouse images. Designed and implemented an image tiling module to improve small-object detection in high-resolution images, significantly enhancing detection accuracy. Enabled universal deployment of the solution across multiple facilities, greatly reducing manual label validation efforts.",
+      techStack: ["PolygonYOLO", "OpenCV", "Python", "PyTorch", "Image Tiling", "Data Augmentation"]
+    },
+    {
+      title: "Warehouse Object Detection using YOLO",
+      description: "Engineered a high-performance object detection pipeline using YOLO models to identify warehouse items such as pallets, boxes, and inventory units from large-scale images. Optimized model training through custom data augmentation and advanced post-processing techniques, enabling automated inventory tracking and improving operational efficiency across multiple facilities.",
+      techStack: ["YOLOv5", "Python", "OpenCV", "NumPy", "Data Augmentation", "Model Optimization"]
+    },
+    {
+      title: "Failure Distribution Analysis Module",
+      description: "Built an failure distribution analysis tool to visualize detection errors across various object detection models. Designed the module to aggregate, analyze, and display detection failures, enabling engineers to identify root causes significantly faster and accelerating the model debugging and iteration cycle.",
+      techStack: ["Python", "PostgreSQL", "Pandas", "NumPy", "Data Visualization"]
+    },
+    {
+      title: "Simulation and Automatic Detection of Artifacts in MRI Images",
+      description: "Collaborated with GE Healthcare data scientists and researchers to simulate artifacts in MRI images and developed algorithms to automatically classify images based on the severity of artifacts.",
+      techStack: ["MRI Imaging", "Image Processing", "Artifact Simulation", "Image Classification", "Python", "PyTorch"]
+    },
+    {
+      title: "Vertebrae-Level Fracture Classification using CT Images",
+      description: "Collaborated with Eindhoven Medical Robotics to classify vertebrae-level fractures from CT images. Developed Digitally Reconstructed Radiographs (DRR) from CT volumes to enable accurate fracture classification.",
+      techStack: ["Medical Imaging", "CT Image Analysis", "DRR Reconstruction", "Image Classification", "Python", "PyTorch"]
+    }
+  ];
+
   const featuredProjects = [
     {
       title: "PDF Reader using LangChain & GPT-OSS",
@@ -17,16 +45,6 @@ const Projects = () => {
     },
     {
       title: "MediSinGAN – Medical Data Generation using GAN (EEML 2021, Budapest)",
-      description: "Collaborated with 6 international participants during EEML'21 to simulate synthetic medical data by training a Generative Adversarial Network (GAN) on a single training image, enabling efficient medical data generation.",
-      techStack: ["GANs", "Medical Image Synthesis", "Deep Learning", "PyTorch", "Python"],
-      codeLink: "https://github.com/CREVIOS/MediSinGAN"
-    },
-    {
-      title: "Vertebrae-Level Fracture Classification using CT Images",
-      description: "Collaborated with Eindhoven Medical Robotics to classify vertebrae-level fractures from CT images. Developed Digitally Reconstructed Radiographs (DRR) from CT volumes to enable accurate fracture classification.",
-      techStack: ["Medical Imaging", "CT Image Analysis", "DRR Reconstruction", "Image Classification", "Python", "PyTorch"]
-    },
-    {
       title: "Real-Time Machine Vision System for Industrial Component Analysis",
       description: "Designed and developed a real-time machine vision system for critical dimension analysis of industrial components. Implemented Canny edge detection for precise dimension measurement of industrial sleeves and deployed the solution on a Raspberry Pi.",
       techStack: ["Machine Vision", "Edge Detection", "Image Processing", "Raspberry Pi", "OpenCV", "Python"]
@@ -107,6 +125,18 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Projects</h2>
         
+        <div className="mb-16">
+          <h3 className="text-2xl font-semibold mb-8 text-gray-800 flex items-center gap-3">
+            <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
+            Professional Projects
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            {professionalProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} isFeatured={true} />
+            ))}
+          </div>
+        </div>
+
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-gray-800 flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
