@@ -39,12 +39,12 @@ const Projects = () => {
       codeLink: "https://github.com/Madhu081096/langchain_pdf_reader"
     },
     {
-      title: "Simulation and Automatic Detection of Artifacts in MRI Images",
-      description: "Collaborated with GE Healthcare data scientists and researchers to simulate artifacts in MRI images and developed algorithms to automatically classify images based on the severity of artifacts.",
-      techStack: ["MRI Imaging", "Image Processing", "Artifact Simulation", "Image Classification", "Python", "PyTorch"]
+      title: "MediSinGAN – Medical Data Generation using GAN (EEML 2021, Budapest)",
+      description: "Collaborated with 6 international participants during EEML'21 to simulate synthetic medical data by training a Generative Adversarial Network (GAN) on a single training image, enabling efficient medical data generation.",
+      techStack: ["GANs", "Medical Image Synthesis", "Deep Learning", "PyTorch", "Python"],
+      codeLink: "https://github.com/CREVIOS/MediSinGAN"
     },
     {
-      title: "MediSinGAN – Medical Data Generation using GAN (EEML 2021, Budapest)",
       title: "Real-Time Machine Vision System for Industrial Component Analysis",
       description: "Designed and developed a real-time machine vision system for critical dimension analysis of industrial components. Implemented Canny edge detection for precise dimension measurement of industrial sleeves and deployed the solution on a Raspberry Pi.",
       techStack: ["Machine Vision", "Edge Detection", "Image Processing", "Raspberry Pi", "OpenCV", "Python"]
@@ -140,7 +140,7 @@ const Projects = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-gray-800 flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
-            Featured Projects
+            Key Projects
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {featuredProjects.map((project, index) => (
