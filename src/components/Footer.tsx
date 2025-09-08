@@ -3,7 +3,7 @@ import { Mail, MapPin, Linkedin, Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer id="contact" className="bg-gray-900 text-white py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
